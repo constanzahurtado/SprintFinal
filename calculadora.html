@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos/estilo.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm bg-info navbar-dark fixed-top">
+            <a class="navbar-brand" href="#">
+                <img src="imagenes/sello.png" style="width:50px;">
+              </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calculadora.html">Calculadora</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recursos.html">Recursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ayuda</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="pfrecuentes.html">Preguntas Frecuentes</a>
+                            <a class="dropdown-item" href="guíadeusuario.html">Guía Usuario</a>
+                            <a class="dropdown-item" href="acercade.html">Acerca de...</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="container-fluid" style="margin-top:90px">
+            <h4>Calculadora Discos Pares</h4>
+            <p>Esta calculadora le indicará si un producto debe tener discos pares en su envase</p>
+            <p>Si no entiende como utilizarla, puede revisar nuestra<a href="guíadeusuario.html"> Guía de Usuario</a>. Si tiene
+            alguna duda,<a href="contacto.html"> contáctenos</a>. Responderemos lo antes posible.</p>
+            <hr>
+            <p>Cálculo de Calorías</p>
+            <section>
+              <form name="orderform" id="orderform">
+                <section>
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                            <input type="text" name="calorias1" id="calorias1" class="form-control">
+                        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                            <label for="calorias1">Ingrediente 1</label>
+                        </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                            <input type="text" name="calorias2" id="calorias2" class="form-control">
+                        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                             <label for="calorias2">Ingrediente 2</label>
+                             
+                        </div>
+                  </div>
+                  <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                        <input type="button" id="boton" onClick="calculoCalorias();" value="Calcular">
+                  </div>     
+                  <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                        <input type="text" name="totalcal" id="totalcal" class="form-control" onFocus="this.form.elements[1].focus()">
+                  <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                        <label for="totalcal">Resultado</label>
+                 </div>
+                 </div>
+                 </div>      
+            </section>
+            <hr widith:100px>
+           
+            <p>Cálculo de Azúcares</p>
+            <section>
+               <form name="orderform1" id="orderform">
+                 <div class="row">
+                        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 ">
+                            <input type="text" name="azucares1" id="azucares1" class="form-control">
+                        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                            <label for="azucares1">Ingrediente 1</label>
+                       </div>
+                       </div>           
+                 <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                          <input type="text" name="azucares2" id="azucares2" class="form-control">
+                  <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                           <label for="azucares2">Ingrediente 2</label>
+                  </div>
+                  </div>
+                  <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                          <input type="button" id="boton" onClick="calculoAzucares();" value="Calcular">
+                  </div>       
+                   <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                          <input type="text" name="totalazu" id="totalazu" class="form-control" onFocus="this.form.elements[1].focus()">
+                   <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                          <label for="totalazu">Resultado</label>
+                   </div>
+                   </div>
+                   </div>
+                   </section>     
+            <hr widith:100px>
+            <section>
+            <p>Cálculo de Grasas Totales</p>
+             <section>
+                <form name="orderform1" id="orderform">
+                   <div class="row">
+                   <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                          <input type="text" name="grasas1" id="grasas1" class="form-control">
+                   <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                          <label for="grasas1">Ingrediente 1</label>
+                  </div>
+                  </div>  
+                  <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                         <input type="text" name="grasas2" id="grasas2" class="form-control">
+                   <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                         <label for="grasas2">Ingrediente 2</label>
+                   </div>
+                   </div>
+                  <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                         <input type="button" id="boton" onClick="calculoGrasas();" value="Calcular">
+                  </div>
+                  <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                         <input type="text" name="totalgra" id="totalgra" class="form-control" onFocus="this.form.elements[1].focus()">
+                   <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                         <label for="totalazu">Resultado</label>
+                    </div>
+                   </div>
+                   </div>
+              </section>
+            <hr widith:100px>
+          
+            <p>Cálculo de Sodio</p>
+              <section>
+                <form name="orderform1" id="orderform">
+                  <div class="row">
+                  <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                       <input type="text" name="sodio1" id="sodio1" class="form-control">
+                  <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                       <label for="sodio1">Ingrediente 1</label>
+                  </div>
+                  </div>
+                  <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                      <input type="text" name="sodio2" id="sodio2" class="form-control">
+                  <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                      <label for="sodio2">Ingrediente 2</label>
+                  </div>
+                  </div>
+                  <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                       <input type="button" id="boton" onClick="calculoSodio();" value="Calcular">
+                  </div>
+                  <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                      <input type="text" name="totalso" id="totalso" class="form-control" onFocus="this.form.elements[1].focus()">
+                   <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                      <label for="totalazu">Resultado</label>
+                   </div>
+                   </div>
+                   </div>
+             </form>
+            </section>
+     </main>
+        <footer>
+            <section class="container-fluid">
+                <div class="container footer">
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 piepagina">
+                    <p>Nombre: Constanza Hurtado Ávila</p>
+                    <p>Correo Electrónico: hurtadoavila@gmail.com</p>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6>">
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-google"></a>
+              <a href="#" class="fa fa-linkedin"></a>
+              <a href="#" class="fa fa-youtube"></a>
+            </div> 
+          </div>
+        </div>
+            </section>
+        </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/calculo.js"></script>  
+</body>
+</html>
+

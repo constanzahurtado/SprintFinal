@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos/estilo.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm bg-info navbar-dark fixed-top">
+            <a class="navbar-brand" href="#">
+                <img src="imagenes/sello.png" style="width:50px;">
+              </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calculadora.html">Calculadora</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recursos.html">Recursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ayuda</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="pfrecuentes.html">Preguntas Frecuentes</a>
+                            <a class="dropdown-item" href="guíadeusuario.html">Guía Usuario</a>
+                            <a class="dropdown-item" href="acercade.html">Acerca de...</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="container-fluid" style="margin-top:90px">
+        <form onsubmit="return validaformulario()" id="form">
+            <h4>Complete todos los campos</h4><br>
+            <p>Complete todos los campos del formulario. Nos pondremos en contacto lo antes posible.</p>
+             <div class="container" style="margin-top:30px">
+             <div class="row">
+                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                <div>
+                     <div class="form-group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" class="form-control" placeholder="Nombre..." id="txtnombre" name="nombre">
+                      </div>
+                      <div class="form-group">
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" class="form-control" placeholder="Apellido..." id="txtapellido" name="apellido">
+                      </div>
+                      <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="text" class="form-control" placeholder="Email..." id="txtemail" name="email">
+                     </div>
+                     <div class="form-group">
+                            <label for="lista">Eliga el motivo de su mensaje:</label>
+                            <select class="form-control form-group" id ="select2" name="lista" multiple="multiple">
+                            </select>
+                     </div>
+                     <div class="form-group">
+                            <label for="comment">Mensaje:</label>
+                            <textarea class="form-control" placeholder="Escriba su mensaje aquí..." rows="5" id="txtmensaje" name="text"></textarea>
+                     </div>
+                     <button type="submit" class="btn btn-primary">Enviar</button>
+                     </div>
+                     </div>
+                     <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        <img src="imagenes/imagenformulario.jpg" alt="Imagen_Formulario" class="mx-auto d-block imagenFormulario">
+                     </div>
+             </div>
+             </div>
+        </form>
+        </section>
+    </main>
+    <footer>
+        <section class="container-fluid">
+            <div class="container footer">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 piepagina">
+                <p>Nombre: Constanza Hurtado Ávila</p>
+                <p>Correo Electrónico: hurtadoavila@gmail.com</p>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6>">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-google"></a>
+          <a href="#" class="fa fa-linkedin"></a>
+          <a href="#" class="fa fa-youtube"></a>
+        </div> 
+      </div>
+    </div>
+        </section>
+    </footer>
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if(document.getElementById("form")){
+        $('#select2').select2({
+            tags:["Solicitud de información", "Reportar errores", "Sugerencias", "Reclamos", "Otros"],
+            placeholder: "Eliga una opción"
+    });
+}
+});
+</script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/validaciónform.js"></script>  
+</body>
+</html>
+
+
+
